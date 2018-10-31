@@ -384,7 +384,6 @@ hello, world!
 - methods and functions are conceptually the same
 
 
-
 # Lemonade Accounting
 
 Prompt the user for how many lemonades he/she sold and over how many hours.
@@ -398,22 +397,19 @@ Assume the following:
  - When prompted, the user will input valid integer values
 
 ```python
-num_lemonades = int(input("How many lemonades did you sell? "))
-num_hours = int(input("Over how many hours? "))
+def calc_profit(num_lemonades, num_hours):
 
-lemons_per_lemonade = 4
-price = 5
-lemon_cost = 0.5
+    lemons_per_lemonade = 4
+    price = 5
+    lemon_cost = 0.5
 
-revenues = num_lemonades * price
-expenses = lemon_cost * num_lemonades * lemons_per_lemonade
+    revenues = num_lemonades * price
+    expenses = lemon_cost * num_lemonades * lemons_per_lemonade
 
-profit = revenues - expenses
+    profit = revenues - expenses
 
-print("You made ${}, or ${} per hour.".format(profit, profit / num_hours))
+    return "You made ${}, or ${} per hour.".format(profit, profit / num_hours)
 ```
-
-
 
 ## Python Exercises
 
